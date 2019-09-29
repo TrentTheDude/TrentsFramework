@@ -61,6 +61,7 @@ public class JSONUtils {
         }
         return null;
     }
+
     public double getDoubleCompoundValue(File jsonFile, String[] parents, String key){
         JSONParser parser = new JSONParser();
         JSONObject nextObject = null;
@@ -72,7 +73,7 @@ public class JSONUtils {
                 nextObject = (JSONObject)firstObject.get(parent);
             }
             if (nextObject != null){
-                return (double)nextObject.get(key);
+                return (Double) nextObject.get(key);
             }
         }catch(FileNotFoundException e){
             e.printStackTrace();
@@ -97,7 +98,7 @@ public class JSONUtils {
                 nextObject = (JSONObject)firstObject.get(parent);
             }
             if (nextObject != null){
-                return (long)nextObject.get(key);
+                return (Long) nextObject.get(key);
             }
         }catch(FileNotFoundException e){
             e.printStackTrace();
@@ -137,7 +138,7 @@ public class JSONUtils {
         try{
             Object obj = parser.parse(new FileReader(jsonFile));
             JSONObject jsonObject = (JSONObject) obj;
-            val = (double) jsonObject.get(key);
+            val = (Double) jsonObject.get(key);
 
         }catch(FileNotFoundException e){
             e.printStackTrace();
