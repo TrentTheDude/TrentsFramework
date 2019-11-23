@@ -19,7 +19,7 @@ public class Framework {
 
     public Framework(Plugin plugin){
         this.plugin = plugin;
-        this.framework = new Framework(plugin);
+        framework = new Framework(plugin);
         this.hologramManager = new HologramManager();
         this.jsonUtils = new JSONUtils();
         this.commandExecutors = new CommandExecutors();

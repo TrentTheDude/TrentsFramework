@@ -25,8 +25,6 @@ public class Hologram {
         this.text = text;
         this.linesText = linesText;
 
-        // Bukkit.getLogger().info("Holo loc: "+location.getY());
-
         //create the hologram and the texts...
         ArmorStand armorStand = getLocation().getWorld().spawn(getLocation(), ArmorStand.class);//spawn the hologram
         armorStand.setVisible(false);//invisible
